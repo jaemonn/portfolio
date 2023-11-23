@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 // tailwind header
 import { Dialog } from '@headlessui/react'
@@ -10,14 +10,37 @@ import {
 function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+    // useEffect(() => {
+    //     // define query selectors
+    //     const navLinkEls = document.querySelectorAll('.navigation a');
+    //     const sectionEls = document.querySelectorAll('.section');
+
+    //     window.addEventListener('scroll', () => {
+    //         sectionEls.forEach(sectionEl => {
+    //             let top = window.scrollY;
+    //             let offset = sectionEl.offsetTop;
+    //             let height = sectionEl.offsetHeight;
+    //             let id = sectionEl.getAttribute('id');
+
+    //             if (top >= offset && top < offset + height) {
+    //                 navLinkEls.forEach(links => {
+    //                     links.classList.remove('text-primary');
+    //                     document.querySelector('a [href=' `#` + id + ']').classList.add('text-primary')
+    //                 })
+    //             }
+    //         })            
+    //     })
+        
+    // }, [])
+
     return (
         <>
-            <header id="header" className="bg-neutral shadow-md text-white sticky top-0 z-50">
+            <header id="header" className="bg-base-100 shadow-md sticky top-0 z-50 m-0 P-0">
                 <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
                     <div className="flex lg:flex-1">
                         <div className="-m-1.5 p-1.5 normal-case text-2xl h-auto w-auto">
                             <span className="font-bold">
-                                <a href='#hero' data-te-smooth-scroll-init >dev.mond</a>
+                                <a href='#home' data-te-smooth-scroll-init >dev.mond</a>
                             </span>
                         </div>
                     </div>
@@ -31,15 +54,15 @@ function Header() {
                             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                         </button>
                     </div>
-                    <div className="hidden lg:flex lg:gap-x-12 section-container">
-                        <div className="text-md font-semibold leading-6 hover:text-primary">
-                            <a href='#about' data-te-smooth-scroll-init>About</a>
+                    <div className="hidden lg:flex lg:gap-x-12 section-container navigation">
+                        <div className="text-md font-semibold leading-6 ">
+                            <a href='#about' className="hover:text-secondary" data-te-smooth-scroll-init>About</a>
                         </div>
-                        <div className="text-md font-semibold leading-6 hover:text-primary">
-                            <a href='#projects' data-te-smooth-scroll-init>Projects</a>
+                        <div className="text-md font-semibold leading-6 ">
+                            <a href='#projects' className="hover:text-secondary" data-te-smooth-scroll-init>Projects</a>
                         </div>
-                        <div className="text-md font-semibold leading-6 hover:text-primary">
-                            <a href='#contacts' data-te-smooth-scroll-init>Contact Me
+                        <div className="text-md font-semibold leading-6 ">
+                            <a href='#contacts' className="hover:text-secondary" data-te-smooth-scroll-init>Contact Me
                             </a>
                         </div>
                     </div>
@@ -65,13 +88,13 @@ function Header() {
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
                                     <div className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7">
-                                        <a href='#'>About</a>
+                                        <a href='#about'>About</a>
                                     </div>
                                     <div className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7">
                                         <a href='#projects'>Projects</a>
                                     </div>
                                     <div className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7">
-                                        <a href='#contact'>Contact Me</a>
+                                        <a href='#contacts'>Contact Me</a>
                                     </div>
                                 </div>
                             </div>

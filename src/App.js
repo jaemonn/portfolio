@@ -17,6 +17,7 @@ function App() {
       navigationHeight + "px"
     )
   }, [])
+  
   return (
     <Suspense fallback={<LoadingSpinner />}>
       <Routes>

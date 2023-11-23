@@ -6,3 +6,21 @@ html {
     scroll-behavior: smooth;
     scroll-padding: var(--scroll-padding);
 }
+
+/**************************  
+# Navigation Bar
+**************************/
+
+
+/**************************  
+# About Bar
+**************************/
+
+
+/**************************  
+# Projects Bar
+**************************/
+/* .project-media img {
+    height: 300px;
+    width: 400px;
+} */
